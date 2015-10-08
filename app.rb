@@ -4,6 +4,10 @@ require 'json'
 class Mirrorer < Sinatra::Base
 
   get '/' do
+    'Hello world!'
+  end
+
+  post '/' do
     body = request.body.read
     if body.length > 1
       puts JSON.parse(request.body.read).inspect
