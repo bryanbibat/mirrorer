@@ -1,9 +1,10 @@
 require 'sinatra/base'
+require 'json'
 
 class Mirrorer < Sinatra::Base
 
   get '/' do
-    puts "hello world"
+    puts JSON.parse(request.body.read).inspect
     'Hello world!'
   end
 
