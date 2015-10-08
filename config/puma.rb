@@ -1,7 +1,7 @@
 #!/usr/bin/env puma
 
 environment "production"
-# daemonize
+daemonize
 pidfile "/home/deploy/mirrorer/tmp/puma/pid"
 state_path "/home/deploy/mirrorer/tmp/puma/state"
 bind "unix:///home/deploy/mirrorer/tmp/puma/socket.sock"
