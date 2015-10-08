@@ -8,11 +8,12 @@ class Mirrorer < Sinatra::Base
   end
 
   post '/' do
-    puts request['X-GitHub-Event']
+    puts "request: #{request['X-GitHub-Event']}"
     body = request.body.read
-    if body.length > 1
-      puts JSON.parse(request.body.read).inspect
-    end
+    puts "body: #{body}"
+    #if body.length > 1
+      #puts JSON.parse(request.body.read).inspect
+    #end
     'Hello world!'
   end
 
