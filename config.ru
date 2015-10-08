@@ -1,6 +1,3 @@
-require 'sinatra'
+require './app'
 
-get '/' do
-  puts "hello world"
-  'Hello world!'
-end
+run Mirrorer
